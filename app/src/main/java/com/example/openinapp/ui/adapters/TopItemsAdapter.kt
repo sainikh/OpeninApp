@@ -16,7 +16,10 @@ import com.example.openinapp.R
 import com.example.openinapp.ui.data.TopItemsModel
 
 
-class TopItemsAdapter(private val topThingsList: List<TopItemsModel>,private val context: Context) : RecyclerView.Adapter<TopItemsAdapter.ViewHolder>()  {
+class TopItemsAdapter(
+    private val topThingsList: List<TopItemsModel>,
+    private val context: Context
+) : RecyclerView.Adapter<TopItemsAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopItemsAdapter.ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -26,24 +29,41 @@ class TopItemsAdapter(private val topThingsList: List<TopItemsModel>,private val
 
     @SuppressLint("SuspiciousIndentation")
     override fun onBindViewHolder(holder: TopItemsAdapter.ViewHolder, position: Int) {
-      val item = topThingsList!![position]
-        when(item.key){
+        val item = topThingsList!![position]
+        when (item.key) {
             "today_clicks" -> {
-                holder.key.text =  context.getString(R.string.today_clicks)
-                holder.imageCardView.setCardBackgroundColor(R.color.top_select_background)
-                holder.imageView.setImageDrawable(ContextCompat.getDrawable(context,R.drawable.top_clicks))
+                holder.key.text = context.getString(R.string.today_clicks)
+                holder.imageCardView.setCardBackgroundColor(context.resources.getColor(R.color.top_select_background))
+                holder.imageView.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        context,
+                        R.drawable.top_clicks
+                    )
+                )
                 holder.imageCardView.radius = 100f
             }
+
             "top_source" -> {
                 holder.key.text = context.getString(R.string.top_source)
-                holder.imageCardView.setCardBackgroundColor(R.color.globe_background)
-                holder.imageView.setImageDrawable(ContextCompat.getDrawable(context,R.drawable.globe))
+                holder.imageCardView.setCardBackgroundColor(context.resources.getColor(R.color.globe_background))
+                holder.imageView.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        context,
+                        R.drawable.globe
+                    )
+                )
                 holder.imageCardView.radius = 100f
             }
+
             "top_location" -> {
                 holder.key.text = context.getString(R.string.top_location)
-                holder.imageCardView.setCardBackgroundColor(R.color.pin_background)
-                holder.imageView.setImageDrawable(ContextCompat.getDrawable(context,R.drawable.pin))
+                holder.imageCardView.setCardBackgroundColor(context.resources.getColor(R.color.pin_background))
+                holder.imageView.setImageDrawable(
+                    ContextCompat.getDrawable(
+                        context,
+                        R.drawable.pin
+                    )
+                )
                 holder.imageCardView.radius = 100f
             }
         }
@@ -51,13 +71,13 @@ class TopItemsAdapter(private val topThingsList: List<TopItemsModel>,private val
     }
 
     override fun getItemCount(): Int {
-      return topThingsList!!.size
+        return topThingsList!!.size
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-            val key : TextView = itemView.findViewById(R.id.key)
-            val value : TextView = itemView.findViewById(R.id.value)
-            val imageView : ImageView = itemView.findViewById(R.id.imageView)
-            val imageCardView : CardView = itemView.findViewById(R.id.imageCardView)
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val key: TextView = itemView.findViewById(R.id.key)
+        val value: TextView = itemView.findViewById(R.id.value)
+        val imageView: ImageView = itemView.findViewById(R.id.imageView)
+        val imageCardView: CardView = itemView.findViewById(R.id.imageCardView)
     }
 }
