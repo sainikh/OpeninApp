@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">OpeninApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="profile_fragment">Profile Fragment</string>
+    <string name="link_fragment">Link Fragment</string>
+    <string name="courses_fragment">Courses Fragment</string>
+    <string name="campaign_fragment">Campaign Fragment</string>
+    <string name="_22_aug_23_sept">22 Aug - 23 Sept</string>
+    <string name="todays_clicks">Todays clicks</string>
+    <string name="simple_link_name">Simple link name</string>
+    <string name="_22_aug_2022">22 Aug 2022</string>
+    <string name="clicks">Clicks</string>
+    <string name="_2023">2023</string>
+    <string name="today_clicks">Top Clicks</string>
+    <string name="top_source">Top Source</string>
+    <string name="top_location">Top Location</string>
+    <string name="https_samplelink_oia_bio_ashd">https://samplelink.oia.bio/ashd...</string>
+</resources>

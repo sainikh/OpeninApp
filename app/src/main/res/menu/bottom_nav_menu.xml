@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/linksFragment"
+        android:icon="@drawable/mail"
+        android:title="links" />
+    <item
+        android:id="@+id/coursesFragment"
+        android:icon="@drawable/files"
+        android:title="Courses" />
+    <item
+        android:id="@+id/dashBoardFragment"
+        android:icon="@drawable/controls"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/campaignsFragment"
+        android:icon="@drawable/media"
+        android:title="Campaigns" />
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/generic"
+        android:title="Profile" />
+</menu>
